@@ -1,0 +1,17 @@
+#php_flag display_errors off
+
+RewriteEngine On
+#ErrorDocument 404 /404.html
+ErrorDocument 404 Maaf-halaman-tidak-ditemukan
+
+#nyamm : (^, page)
+#front-end -
+	RewriteRule   ^beranda/?$   									index.php?page=Beranda
+	RewriteRule   ^paket-umroh/?$   						  index.php?page=PaketUmroh
+	RewriteRule   ^tabungan-umroh/?$   						index.php?page=TabunganUmroh
+	RewriteRule   ^talangan-umroh/?$   						index.php?page=TalanganUmroh
+	RewriteRule   ^peluang-usaha/?$   						index.php?page=PeluangUsaha
+	RewriteRule   ^tentang-kami/?$   							index.php?page=TentangKami
+
+# Send all blocked request to homepage with 403 Forbidden error!
+#RewriteRule ^(.*)$ index.php [F,L]
